@@ -27,14 +27,11 @@ export const Posts: CollectionConfig = {
     },
     {
       name: 'category',
-      type: 'select',
+      type: 'relationship',
+      relationTo: 'categories',
       label: 'Categoría',
-      options: [
-        { label: 'Server Side Rendering (SSR)', value: 'ssr' },
-        { label: 'Static Site Generation (SSG)', value: 'ssg' },
-        { label: 'Incremental Static Regeneration (ISR)', value: 'isr' },
-      ],
       required: true,
+      hasMany: false,
     },
     {
       name: 'content',
