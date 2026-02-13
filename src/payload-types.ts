@@ -491,6 +491,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 export interface Profile {
   id: number;
   name: string;
+  nickname: string;
   bio?: string | null;
   profilePicture?: (number | null) | Media;
   socialLinks?: {
@@ -507,6 +508,7 @@ export interface Profile {
  */
 export interface ProfileSelect<T extends boolean = true> {
   name?: T;
+  nickname?: T;
   bio?: T;
   profilePicture?: T;
   socialLinks?:

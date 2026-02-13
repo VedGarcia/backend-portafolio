@@ -9,6 +9,12 @@ export const Profile: GlobalConfig = {
       label: 'Nombre Completo',
       required: true,
     },
+      {
+      name: 'nickname',
+      type: 'text',
+      label: 'Sobrenombre',
+      required: true,
+    },
     {
       name: 'bio',
       type: 'textarea',
