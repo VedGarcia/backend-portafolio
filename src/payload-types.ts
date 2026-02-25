@@ -493,6 +493,21 @@ export interface Profile {
   name: string;
   nickname: string;
   bio?: string | null;
+  all_bio?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   profilePicture?: (number | null) | Media;
   socialLinks?: {
     linkedin?: string | null;
@@ -510,6 +525,7 @@ export interface ProfileSelect<T extends boolean = true> {
   name?: T;
   nickname?: T;
   bio?: T;
+  all_bio?: T;
   profilePicture?: T;
   socialLinks?:
     | T

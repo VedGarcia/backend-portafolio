@@ -21,6 +21,11 @@ export const Profile: GlobalConfig = {
       label: 'Biografía corta',
     },
     {
+      name: 'all_bio',
+      type: 'richText',
+      label: 'Biografía completa',
+    },
+    {
       name: 'profilePicture',
       type: 'upload',
       relationTo: 'media',
